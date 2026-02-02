@@ -43,7 +43,7 @@ log_info "Iniciando configuracion del servidor..."
 log_info "Actualizando sistema operativo..."
 apt update && apt upgrade -y
 log_success "Sistema actualizado"
-
+    
 # ============================================
 # 2. Instalar Dependencias Basicas
 # ============================================
@@ -197,9 +197,7 @@ log_success "Fail2Ban configurado"
 # 13. Crear Usuario para Deployments (opcional)
 # ============================================
 log_info "Configurando usuario dev1lb0y para deployments..."
-adduser dev1lb0y
-usermod -aG sudo dev1lb0y
-usermod -aG www-data
+usermod -aG www-data dev1lb0y
 
 # Configurar SSH key para deployments automaticos
 mkdir -p /home/dev1lb0y/.ssh
@@ -258,7 +256,6 @@ echo "  - PostgreSQL: $(psql --version | cut -d' ' -f3)"
 echo "  - SQLite: $(sqlite3 --version | cut -d' ' -f1)"
 echo "  - Redis: $(redis-server --version | cut -d' ' -f3 | cut -d'=' -f2)"
 echo "  - Node.js: $(node -v)"
-echo "  - PM2: $(pm2 -v)"
 echo "  - Composer: $(composer --version | cut -d' ' -f3)"
 echo ""
 echo "Bases de datos:"
