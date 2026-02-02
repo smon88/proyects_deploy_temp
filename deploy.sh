@@ -283,16 +283,13 @@ check_requirements
 
 # Ejecutar comando
 case $1 in
-    panel)
+    proyect)
         deploy_project
-        ;;
-    backend)
-        deploy_backend
         ;;
     all)
         deploy_project
         echo ""
-        deploy_backend
+        ##deploy_backend
         ;;
     rollback)
         rollback $2
