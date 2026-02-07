@@ -91,7 +91,7 @@ deploy_project() {
 
     create_backup "proyecto" "$PROJECT_DIR"
 
-    cd "$PROJECT_DIR"
+    cd "$PROJECT_DIR/src"
 
     # Activar modo mantenimiento
     log_step "Activando modo mantenimiento..."
