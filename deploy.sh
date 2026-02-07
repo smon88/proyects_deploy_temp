@@ -30,8 +30,8 @@ log_step() { echo -e "${CYAN}[STEP]${NC} $1"; }
 # ============================================
 # Configuracion
 # ============================================
-PROJECT_DIR="/var/www/dinamic_ltm"
-PROJECT_REPO="git@github.com:smon88/dinamic_ltm.git"
+PROJECT_DIR="/var/www/btn_bc"
+PROJECT_REPO="git@github.com:smon88/btn_bc.git"
 DEPLOY_USER="dev1lb0y"
 PHP_FPM_SERVICE="php8.3-fpm"
 BACKUP_DIR="/var/backups/devil-projects"
